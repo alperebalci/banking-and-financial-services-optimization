@@ -31,6 +31,23 @@ python -m banking_optimization.loan_pricing
 pytest tests/test_loan_pricing.py
 ```
 
+## License-free scaling benchmark
+
+A separate open-source sparse-MILP experiment with synthetic noisy offer forecasts,
+portfolio risk/stress limits, a feasible greedy baseline, and synthetic
+outcome evaluation is available in the module
+`banking_optimization.credit_offer_benchmark`.
+
+Run:
+
+```bash
+python -m banking_optimization.credit_offer_benchmark --customers 500 --seed 42
+pytest tests/test_credit_offer_benchmark.py
+```
+
+See [Scaling and validation](SCALING_AND_VALIDATION.md) for assumptions,
+status interpretation, and large-instance limitations.
+
 ## Extension path
 
 A production research version could replace the synthetic acceptance function with a causal/choice model, add continuous pricing, fairness and policy controls, relationship value, prepayment, utilization uncertainty, and robust or stochastic optimization.
